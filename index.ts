@@ -18,7 +18,7 @@ rl.question("How many loops are you going to make?\n   ", loop => {
     for (let i=0; i < Number(loop); i++) {
         let doors:boolean[] = [];
         const goat:number = Math.floor(Math.random() * 3);
-        let sOrF:string = 'Fail';
+        let sOrF:string = 'Wrong!';
         
         for (let i:number=0; i < 3; i++) {
             if (i === goat) doors.push(true);
@@ -38,7 +38,7 @@ rl.question("How many loops are you going to make?\n   ", loop => {
         loopCount++;
         if (doors[select]) {
             correctAnswerCount++;
-            sOrF = 'Success'
+            sOrF = 'Correct!'
         }
         console.log(`${loopCount}th try | ${sOrF} | Answer rate: ${correctAnswerCount / loopCount * 100}%`);
     }

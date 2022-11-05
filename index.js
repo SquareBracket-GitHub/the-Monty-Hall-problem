@@ -20,7 +20,7 @@ rl.question("How many loops are you going to make?\n   ", function (loop) {
     for (var i = 0; i < Number(loop); i++) {
         var doors_1 = [];
         var goat_1 = Math.floor(Math.random() * 3);
-        var sOrF_1 = 'Fail';
+        var sOrF_1 = 'Wrong!';
         for (var i_1 = 0; i_1 < 3; i_1++) {
             if (i_1 === goat_1)
                 doors_1.push(true);
@@ -38,7 +38,7 @@ rl.question("How many loops are you going to make?\n   ", function (loop) {
         loopCount++;
         if (doors_1[select_1]) {
             correctAnswerCount++;
-            sOrF_1 = 'Success';
+            sOrF_1 = 'Correct!';
         }
         console.log("".concat(loopCount, "th try | ").concat(sOrF_1, " | Answer rate: ").concat(correctAnswerCount / loopCount * 100, "%"));
     }
